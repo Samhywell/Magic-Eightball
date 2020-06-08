@@ -12,39 +12,20 @@ let userQuestion = "Will my team win this weekend?";
 userQuestion === "Will my team win this weekend?" ? console.log("Sam asked if their team will win this weekend.") :
 console.log("Please ask me a question.");
 
-// variable that will generate a random number between 0 & 7
-let randomNumber = Math.floor(Math.random() * 8);
+let answers = [
+	"Cannot predict now",
+  "Please try again",
+  "Do not count on it",
+  "My sources say no",
+  "Outlook not so good",
+  "It is decidedly so",
+  "Signs point to yes",
+  "It is certain"
+];
 
-// Variable with an empty string that can have a value saved to it
-let eightBall = '';
+// variable that will generate a random number between 0 & the amount of answers minus 1
+let randomNumber = Math.floor(Math.random() * answers.length);
 
-// A control flow of switch statements that takes in the random number, and then assigns it to the variable eightBall
-    switch(randomNumber) {
-        case 0:
-            eightBall = 'Cannot predict now'
-            break;
-        case 1:
-            eightBall = 'Please try again'
-            break;
-        case 2:
-            eightBall = 'Do not count on it'
-            break;
-        case 3:
-            eightBall = 'My sources say no'
-            break;
-        case 4:
-            eightBall = 'Outlook not so good'
-            break;
-        case 5:
-            eightBall = 'It is decidedly so'
-            break;
-        case 6:
-            eightBall = 'Signs point to yes'
-            break;
-        case 7:
-            eightBall = 'It is certain'
-            break;                    
-    }
 
-// Prints the outcome of the variable eightBall
-console.log(`The eight ball answered: ${eightBall}`); 
+// Prints the response by accessing the answers array with the random number as the key
+console.log(`The eight ball answered: ${answers[randomNumber]}`); 
