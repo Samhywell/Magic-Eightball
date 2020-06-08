@@ -14,14 +14,14 @@ console.log("Please ask me a question.");
 
 let answers = [
 	"Cannot predict now",
-  "Please try again",
-  "Do not count on it",
-  "My sources say no",
-  "Outlook not so good",
-  "It is decidedly so",
-  "Signs point to yes",
-  "It is certain"
-];
+  	"Please try again",
+  	"Do not count on it",
+  	"My sources say no",
+  	"Outlook not so good",
+  	"It is decidedly so",
+  	"Signs point to yes",
+ 	 "It is certain"
+	];
 
 // variable that will generate a random number between 0 & the amount of answers minus 1
 let randomNumber = Math.floor(Math.random() * answers.length);
